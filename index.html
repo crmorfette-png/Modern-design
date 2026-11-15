@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="morfette - creative web developer portfolio">
+  <title>morfette | Creative Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>[data-anim]{opacity:1!important;transform:none!important}.wi{transform:none!important}#loader{display:none}</style></noscript>
+</head>
+<body>
+
+  <!-- Loader + page transition -->
+  <div id="loader">
+    <div class="loader-blob"></div>
+    <div class="loader-name">morfette</div>
+    <div class="loader-count"><span id="count">0</span>%</div>
+    <div class="loader-bar"><i id="bar"></i></div>
+  </div>
+  <div class="curtain"><span></span><span></span><span></span><span></span><span></span></div>
+
+  <!-- Background + cursor effects -->
+  <div class="bg"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="orb o4"></span></div>
+  <canvas id="sparkles"></canvas>
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span></span></div>
+  <div class="progress"></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#8b5cf6"/><stop offset=".5" stop-color="#ff3d9a"/><stop offset="1" stop-color="#ff9f43"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo"><span class="logo-mark">M</span>morfette</a>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://wa.me/254727385417" target="_blank" rel="noopener" class="btn btn-wa btn-sm magnetic nav-cta">WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/254727385417" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp me</a>
+  </div>
+
+  <a href="https://wa.me/254727385417" target="_blank" rel="noopener" class="fab" aria-label="Chat on WhatsApp" data-cursor="Chat">💬</a>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="badge"><i></i> Open for new projects</span>
+        <h1 class="hero-title" aria-label="Hi, I'm morfette">
+          <span class="line split-chars">Hi, I'm</span>
+          <span class="line big split-chars chars-grad" data-offset="8">morfette</span>
+        </h1>
+        <p class="hero-role">I'm a creative
+          <span class="rotator"><span class="ri"><b>Designer</b><b>Developer</b><b>Creator</b><b>Learner</b><b>Designer</b></span></span>
+        </p>
+        <p class="hero-sub">I build colorful, animated websites that feel alive. Learning, creating and leveling up every single day.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-grad magnetic">See my work →</a>
+          <a href="https://wa.me/254727385417" target="_blank" rel="noopener" class="btn btn-outline magnetic">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="scene" id="scene">
+          <div class="cube">
+            <div class="face f1">HTML</div>
+            <div class="face f2">CSS</div>
+            <div class="face f3">JS</div>
+            <div class="face f4">GIT</div>
+            <div class="face f5">UI</div>
+            <div class="face f6">UX</div>
+          </div>
+        </div>
+        <div class="p p1" data-depth="40"><span class="shape sph s1"></span></div>
+        <div class="p p2" data-depth="-30"><span class="shape sph s2"></span></div>
+        <div class="p p3" data-depth="55"><span class="shape torus"></span></div>
+        <div class="p p4" data-depth="-45"><span class="shape pill"></span></div>
+      </div>
+    </div>
+    <div class="scroll-ind"><i></i></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marq-wrap">
+    <div class="marquee"><div class="track">
+      <span>Web Design</span><span>✦</span><span>Animation</span><span>✦</span><span>Frontend</span><span>✦</span><span>Creative Code</span><span>✦</span>
+    </div></div>
+  </div>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <p class="reveal-text">I turn ideas into colorful, animated, living websites, one line of code at a time. Every pixel moves with purpose, every scroll tells a story.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-visual" data-anim="left">
+        <div class="avatar tilt" data-cursor="Hi!">
+          <!-- To use your photo, replace the next line with: <img src="me.jpg" alt="morfette"> -->
+          <div class="avatar-inner">M</div>
+          <span class="chip-float c1">⚡ HTML</span>
+          <span class="chip-float c2">🎨 CSS</span>
+          <span class="chip-float c3">🚀 JavaScript</span>
+          <span class="chip-float c4">🔥 Creative</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow" data-anim="up">About me</span>
+        <h2 class="title split-words">Hi, I'm <span class="grad-text">morfette</span> and I love making the web beautiful</h2>
+        <p class="lead" data-anim="up" style="--d:.1s">I'm a passionate beginner web developer who loves turning ideas into colorful, animated websites. I started with HTML, CSS and JavaScript and I learn something new every single day.</p>
+        <p class="lead" data-anim="up" style="--d:.2s;margin-top:14px">When I'm not coding, I'm exploring cybersecurity and finding new ways to make the web faster, safer and more fun.</p>
+        <div class="stats">
+          <div class="stat" data-anim="zoom" style="--d:.1s"><b data-count="3" data-suffix="+">0</b><span>Technologies</span></div>
+          <div class="stat" data-anim="zoom" style="--d:.2s"><b data-count="1">0</b><span>Live website</span></div>
+          <div class="stat" data-anim="zoom" style="--d:.3s"><b data-count="100" data-suffix="%">0</b><span>Dedication</span></div>
+          <div class="stat" data-anim="zoom" style="--d:.4s"><b>∞</b><span>Curiosity</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container center">
+      <span class="eyebrow" data-anim="up">What I do</span>
+      <h2 class="title split-words">What I love to <span class="grad-text">build</span></h2>
+      <p class="lead" data-anim="up">Websites with personality, motion and a little bit of magic.</p>
+      <div class="cards">
+        <div class="cell" data-anim="flip" style="--d:0s"><div class="card tilt">
+          <div class="icon">🎨</div><h3>Landing Pages</h3><p>Eye-catching one-page sites that grab attention and keep it.</p>
+        </div></div>
+        <div class="cell" data-anim="flip" style="--d:.12s"><div class="card tilt">
+          <div class="icon">💼</div><h3>Portfolio Sites</h3><p>Personal websites that show off your work, skills and personality.</p>
+        </div></div>
+        <div class="cell" data-anim="flip" style="--d:.24s"><div class="card tilt">
+          <div class="icon">✨</div><h3>Animated Interfaces</h3><p>Smooth scroll effects, hover magic and playful micro-interactions.</p>
+        </div></div>
+        <div class="cell" data-anim="flip" style="--d:.36s"><div class="card tilt">
+          <div class="icon">📱</div><h3>Responsive Design</h3><p>Layouts that look great on phones, tablets and big screens.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container center">
+      <span class="eyebrow" data-anim="up">Skills</span>
+      <h2 class="title split-words">My growing <span class="grad-text">toolkit</span></h2>
+      <p class="lead" data-anim="up">Always learning. These numbers go up every week.</p>
+      <div class="rings">
+        <div class="ring" data-level="65" data-anim="zoom" style="--d:0s">
+          <svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fgc" cx="60" cy="60" r="52"/></svg>
+          <b>0%</b><span>HTML</span>
+        </div>
+        <div class="ring" data-level="55" data-anim="zoom" style="--d:.12s">
+          <svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fgc" cx="60" cy="60" r="52"/></svg>
+          <b>0%</b><span>CSS</span>
+        </div>
+        <div class="ring" data-level="40" data-anim="zoom" style="--d:.24s">
+          <svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fgc" cx="60" cy="60" r="52"/></svg>
+          <b>0%</b><span>JavaScript</span>
+        </div>
+        <div class="ring" data-level="35" data-anim="zoom" style="--d:.36s">
+          <svg viewBox="0 0 120 120"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fgc" cx="60" cy="60" r="52"/></svg>
+          <b>0%</b><span>Git &amp; GitHub</span>
+        </div>
+      </div>
+      <div class="chips" data-anim="up">
+        <span>Code OSS</span><span>GitHub</span><span>Git</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Linux</span><span>Responsive</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE 2 -->
+  <div class="marq-wrap">
+    <div class="marquee rev"><div class="track">
+      <span>Let's create</span><span>✦</span><span>Let's animate</span><span>✦</span><span>Let's build</span><span>✦</span><span>Let's launch</span><span>✦</span>
+    </div></div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container center">
+      <span class="eyebrow" data-anim="up">Projects</span>
+      <h2 class="title split-words">Things I've <span class="grad-text">made</span></h2>
+      <p class="lead" data-anim="up">A few projects, with more on the way.</p>
+      <div class="cards projects">
+        <div class="cell" data-anim="up" style="--d:0s"><div class="card project tilt" data-cursor="View">
+          <div class="thumb" style="--g:linear-gradient(135deg,#8b5cf6,#ff3d9a)">🚀</div>
+          <div class="p-body"><span class="tag">Live</span><h3>My First Website</h3><p>My very first site, published for the whole world on GitHub Pages.</p>
+          <a class="link" href="https://crmorfette-png.github.io/my-first-website/" target="_blank" rel="noopener">View live <span>→</span></a></div>
+        </div></div>
+        <div class="cell" data-anim="up" style="--d:.12s"><div class="card project tilt" data-cursor="Soon">
+          <div class="thumb" style="--g:linear-gradient(135deg,#22d3ee,#8b5cf6)">🔐</div>
+          <div class="p-body"><span class="tag">In progress</span><h3>Password Checker</h3><p>A tool that tests how strong a password is, in real time.</p></div>
+        </div></div>
+        <div class="cell" data-anim="up" style="--d:.24s"><div class="card project tilt" data-cursor="Soon">
+          <div class="thumb" style="--g:linear-gradient(135deg,#ff9f43,#ff3d9a)">🌦️</div>
+          <div class="p-body"><span class="tag">Planned</span><h3>Weather App</h3><p>Live weather for any city using a free weather API.</p></div>
+        </div></div>
+        <div class="cell" data-anim="up" style="--d:.36s"><div class="card project tilt" data-cursor="Talk">
+          <div class="thumb" style="--g:linear-gradient(135deg,#34f5a1,#22d3ee)">💡</div>
+          <div class="p-body"><span class="tag">Your idea</span><h3>Your Project Here</h3><p>Have something in mind? Let's build it together.</p>
+          <a class="link" href="#contact">Let's talk <span>→</span></a></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" class="section">
+    <div class="container center">
+      <span class="eyebrow" data-anim="up">Journey</span>
+      <h2 class="title split-words">My coding <span class="grad-text">story</span></h2>
+      <div class="timeline">
+        <div class="t-line"></div>
+        <div class="t-item" data-anim="left"><div class="t-card"><span class="t-date">Day 1</span><h3>Wrote my first lines of HTML</h3><p>Discovered how websites are built from scratch.</p></div></div>
+        <div class="t-item" data-anim="right"><div class="t-card"><span class="t-date">Milestone</span><h3>Published my first website</h3><p>Went live on GitHub Pages for everyone to see.</p></div></div>
+        <div class="t-item" data-anim="left"><div class="t-card"><span class="t-date">Now</span><h3>Leveling up with CSS &amp; JavaScript</h3><p>Building animations, effects and real projects.</p></div></div>
+        <div class="t-item" data-anim="right"><div class="t-card"><span class="t-date">Next</span><h3>Bigger projects &amp; cybersecurity</h3><p>Creating apps, exploring security and growing daily.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta" data-anim="zoom">
+        <h2>Have an idea?<br>Let's make it real.</h2>
+        <p>Message me on WhatsApp and let's turn your idea into a colorful, animated website.</p>
+        <a href="https://wa.me/254727385417" target="_blank" rel="noopener" class="btn magnetic">Message me now 💬</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container center">
+      <span class="eyebrow" data-anim="up">Contact</span>
+      <h2 class="title split-words">Let's <span class="grad-text">talk</span></h2>
+      <p class="lead" data-anim="up">Pick your favorite way to reach me.</p>
+      <div class="contact-grid">
+        <div class="info">
+          <a class="wa" href="https://wa.me/254727385417" target="_blank" rel="noopener" data-anim="left"><span class="ic">💬</span><div><small>WhatsApp</small><strong>+254 727 385 417</strong></div></a>
+          <a href="mailto:ynwmadollar@gmail.com" data-anim="left" style="--d:.12s"><span class="ic">✉️</span><div><small>Email</small><strong>ynwmadollar@gmail.com</strong></div></a>
+          <a href="https://github.com/crmorfette-png" target="_blank" rel="noopener" data-anim="left" style="--d:.24s"><span class="ic">🐙</span><div><small>GitHub</small><strong>crmorfette-png</strong></div></a>
+        </div>
+        <form class="form" id="wa-form" data-anim="right">
+          <input id="f-name" type="text" placeholder="Your name" required>
+          <textarea id="f-msg" placeholder="Tell me about your idea..." required></textarea>
+          <button type="submit" class="btn btn-grad magnetic">Send via WhatsApp 🚀</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-big">morfette</div>
+    <div class="foot-row">
+      <span>© 2026 morfette. Made with ❤ and a lot of CSS.</span>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
